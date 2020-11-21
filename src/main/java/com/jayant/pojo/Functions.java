@@ -1,0 +1,61 @@
+package com.jayant.pojo;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Functions implements Comparable<Functions> {
+    private int id;
+    private String name;
+    private int parentid;
+    private boolean idleaf;
+//    关联属性
+    private Set ais = new HashSet();
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getParentid() {
+        return parentid;
+    }
+
+    public void setParentid(int parentid) {
+        this.parentid = parentid;
+    }
+
+    public boolean isIdleaf() {
+        return idleaf;
+    }
+
+    public void setIdleaf(boolean idleaf) {
+        this.idleaf = idleaf;
+    }
+
+    public Set getAis() {
+        return ais;
+    }
+
+    public void setAis(Set ais) {
+        this.ais = ais;
+    }
+
+    @Override
+    public int compareTo(Functions arg0) {
+
+        return ((Integer) this.getId()).compareTo((Integer) (arg0.getId()));
+    }
+
+
+}
